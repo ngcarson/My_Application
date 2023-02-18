@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnGenerateSpeech = findViewById(R.id.btnGenerateSpeech);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        //test
+        //test2
         //setSupportActionBar(binding.toolbar);
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
