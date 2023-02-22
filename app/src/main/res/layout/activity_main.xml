@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="A" />
+        android:hint="A"
+        android:onClick="onClick" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
