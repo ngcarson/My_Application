@@ -16,6 +16,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    static String[] letters = {"A","B","C","D","E","F"};
+    int letter_position = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick (View view) {
+        letter_position += 1;
         TextView txtHello = findViewById(R.id.txtMsg);
-        txtHello.setText("B");
+        txtHello.setText(letters[letter_position]);
+        if (letter_position == 5) {
+            letter_position = -1;
+        }
     }
 }
