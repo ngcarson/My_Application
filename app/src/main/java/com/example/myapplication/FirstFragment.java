@@ -11,7 +11,12 @@ import java.util.Locale;
 
 public class FirstFragment extends AppCompatActivity {
     private TextToSpeech mTTS;
-    static String[] letters = {"A","B","C","D","E","F"};
+    static String[] letters = {
+            "A","B","C","D","E",
+            "F","G","H","I","J",
+            "K","L","M","N","O",
+            "P","Q","R","S","T",
+            "U","V","W","X","Y","Z"};
     int letter_position = 0;
 
     @Override
@@ -29,6 +34,8 @@ public class FirstFragment extends AppCompatActivity {
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         Log.e( "TTS", "Language not supported");
                     }
+
+                    speak("A");
                 } else {
                     Log.e( "TTS", "Initialization failed");
                 }
@@ -41,7 +48,7 @@ public class FirstFragment extends AppCompatActivity {
         TextView txtHello = findViewById(R.id.txtMsg);
         txtHello.setText(letters[letter_position]);
         speak(letters[letter_position]);
-        if (letter_position == 5) {
+        if (letter_position == 25) {
             letter_position = -1;
         }
     }
@@ -58,8 +65,6 @@ public class FirstFragment extends AppCompatActivity {
             mTTS.stop();
             mTTS.shutdown();
         }
-
         super.onDestroy();
     }
-
 }
