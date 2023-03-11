@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:text="Activity 1" />
+        android:text="ABC : in order" />
 
     <Button
         android:id="@+id/btn2"
@@ -20,7 +20,7 @@
         android:layout_below="@+id/btn"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:text="Activity 2" />
+        android:text="ABC : random" />
 
     <Button
         android:id="@+id/btn3"
