@@ -28,8 +28,6 @@ public class FirstFragment extends AppCompatActivity {
 
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         Log.e( "TTS", "Language not supported");
-                    } else {
-                        //test
                     }
                 } else {
                     Log.e( "TTS", "Initialization failed");
