@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Random;
 
 import java.util.Locale;
 
@@ -44,13 +45,11 @@ public class SecondFragment extends AppCompatActivity {
     }
 
     public void onClick (View view) {
-        letter_position += 1;
+        Random rand = new Random();
+        int randomNumber = rand.nextInt(25) + 1;
         TextView txtHello = findViewById(R.id.txtMsg);
-        txtHello.setText(letters[letter_position]);
-        speak(letters[letter_position]);
-        if (letter_position == 25) {
-            letter_position = -1;
-        }
+        txtHello.setText(letters[randomNumber]);
+        speak(letters[randomNumber]);
     }
 
     public void speak(String letter) {
