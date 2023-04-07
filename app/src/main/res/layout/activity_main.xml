@@ -38,6 +38,7 @@
         android:layout_below="@+id/btn"
         android:layout_centerHorizontal="true"
         android:layout_weight="1"
-        android:text="Activity 4" />
+        android:onClick="onClick"
+        android:text="123 : random" />
 
 </LinearLayout>

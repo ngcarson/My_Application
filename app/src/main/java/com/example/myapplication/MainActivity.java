@@ -34,5 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Button #4: 123 RANDOM
+        button = (Button) findViewById(R.id.btn4);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this,FourthFragment.class);
+                startActivity(intent);
+            }
+        });
     }
 }
