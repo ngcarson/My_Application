@@ -15,7 +15,7 @@ import java.util.Locale;
 public class ThirdFragment extends AppCompatActivity {
 
     private TextToSpeech mTTS;
-    private int ittNumber;
+    private int ittNumber = 1;
     private String displayString;
 
 
@@ -28,6 +28,11 @@ public class ThirdFragment extends AppCompatActivity {
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
+
+                displayString = String.valueOf(ittNumber);
+                TextView txtHello = findViewById(R.id.txtMsg);
+                txtHello.setText(displayString);
+
                 if (status == TextToSpeech.SUCCESS) {
                     int result = mTTS.setLanguage(Locale.CANADA);
 
@@ -35,7 +40,7 @@ public class ThirdFragment extends AppCompatActivity {
                         Log.e( "TTS", "Language not supported");
                     }
 
-                    speak("A");
+                    speak("1");
                 } else {
                     Log.e( "TTS", "Initialization failed");
                 }
@@ -51,8 +56,8 @@ public class ThirdFragment extends AppCompatActivity {
         speak(displayString);
 
     }
-    public void speak(String letter) {
-        String text = letter;
+    public void speak(String number) {
+        String text = number;
 
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
